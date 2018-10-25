@@ -1333,3 +1333,4 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     client.on('guildMemberAdd', member=> {
         member.addRole(member.guild.roles.find("name","*Gucci ."));
         });
+client.login('NTAyODUzNzYyMzY5NDU0MDkx.Dqt_Gw.2RJub6qIZlLt5FsCejuAcaMMrGY');
