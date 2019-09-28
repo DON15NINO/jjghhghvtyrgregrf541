@@ -1,22 +1,3 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const fs = require("fs");
-const ytdl = require("ytdl-core");
-const { Client, Util } = require('discord.js');
-const getYoutubeID = require('get-youtube-id');
-const fetchVideoInfo = require('youtube-info');
-const YouTube = require('simple-youtube-api');
-const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
-const queue = new Map();
-const UserBlocked = new Set();
-const prefix = '!'
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
- 
- 
- 
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Desert Bot- Script By : GMZN Host`);
@@ -45,28 +26,7 @@ if (message.content.startsWith(adminprefix + 'tw')) {
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`) //حقوق GMZN Host
 }
 });
-
-client.on('message' , async (message) => {
-       if(message.content.startsWith(`<@${client.user.id}>`)) {
-              message.channel.startTyping()
- let responses = [
-        'انتا انسان عسلية',
-        'هلا امرني',
-        'تحبني؟',
-         'طفشان عندك نكتة؟',
-         'تمنشن بوت؟',
-         'اعجبك البوت',
-         'لا تنسى تزور سيرفر السبورت',
-       'احبك ياخي'
-    ]
-    
-    // Fetch a random item from the array
-    let fetched = responses[Math.floor(Math.random() * responses.length)];
-   message.reply(fetched)
-   message.channel.stopTyping()
-       }
   
-});
 client.on('message', message => {
         var prefix = "#";
               if(!message.channel.guild) return;
